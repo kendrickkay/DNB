@@ -129,7 +129,8 @@ ixs = {1:7 8:13 14:21};
 for p=1:length(ixs)
 
   % first, write out the figure to a .png file
-  figure; setfigurepos([100 100 900 275]); hold on;
+  figure; set(gcf,'Visible','off','PaperPositionMode','auto');
+  setfigurepos([100 100 900 275]); hold on;
   h = bar(summary(ixs{p},:,1),1);  % plot the medians
   colormap(jet);
   for mm=1:length(h)
@@ -171,7 +172,8 @@ for p=1:size(allR2,1)
       end
 
       % write out the figure to a .png file
-      figure; setfigurepos([100 100 500 500]); hold on;
+      figure; set(gcf,'Visible','off','PaperPositionMode','auto');
+      setfigurepos([100 100 500 500]); hold on;
       scatter(allR2{p,d1}(voxelselections{p}), ...
               allR2{p,d2}(voxelselections{p}),25,'r.');
       ax = axis;
@@ -180,6 +182,8 @@ for p=1:size(allR2,1)
       axis([mn mx mn mx]);
       axissquarify;
       axis([mn mx mn mx]);
+      straightline(0,'h','y-');
+      straightline(0,'v','y-');
       xlabel(sprintf('%s (cross-validated R^2)',denoisenames{d1}));
       ylabel(sprintf('%s (cross-validated R^2)',denoisenames{d2}));
       title(sprintf('Dataset %d',p));
