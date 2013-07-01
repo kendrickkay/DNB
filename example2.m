@@ -8,6 +8,9 @@ DNBdownloadresults;
 % construct path to the DNB root directory
 dnbdir = absolutepath(strrep(which('DNBrun'),'DNBrun.m',''));
 
+% create directory for figures
+mkdirquiet(fullfile(dnbdir,'figures'));
+
 %% Load in a .mat file that contains the DNB results
 
 load(fullfile(dnbdir,'DNBresults','results.mat'));
