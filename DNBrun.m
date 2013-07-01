@@ -23,8 +23,9 @@ function DNBrun(datasetnumber,methodname)
 % figure; imagesc(a.performance(:,:,5),[0 50]); axis image; colormap(hot); colorbar;
 
 % figure out a directory name for figures, outputs, etc.
-figuredir = absolutepath(strrep(which('DNBrun'),'DNBrun.m', ...
-              sprintf('DNBresults/%s_dataset%02d',methodname,datasetnumber)));
+resultsdir = strrep(which('DNBrun'),'DNBrun.m','DNBresults');
+mkdirquiet(resultsdir);
+figuredir = absolutepath(fullfile(resultsdir,sprintf('%s_dataset%02d',methodname,datasetnumber)));
 
 % evaluate the method on the dataset
 performance = DNBevaluatemethod(datasetnumber,str2func(sprintf('DNBmethod_%s',methodname)),figuredir);
