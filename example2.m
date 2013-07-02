@@ -10,6 +10,7 @@ dnbdir = absolutepath(strrep(which('DNBrun'),'DNBrun.m',''));
 
 % create directory for figures
 mkdirquiet(fullfile(dnbdir,'figures'));
+mkdirquiet(fullfile(dnbdir,'figures','scatter'));
 
 %% Load in a .mat file that contains the DNB results
 
@@ -186,7 +187,7 @@ for p=1:size(allR2,1)
       xlabel(sprintf('%s (cross-validated R^2)',denoisenames{d1}));
       ylabel(sprintf('%s (cross-validated R^2)',denoisenames{d2}));
       title(sprintf('Dataset %d',p));
-      filename = sprintf(fullfile(dnbdir,'figures','scatter_%s_vs_%s_dataset%02d.png'), ...
+      filename = sprintf(fullfile(dnbdir,'figures','scatter','scatter_%s_vs_%s_dataset%02d.png'), ...
                                   denoisemethods{d1},denoisemethods{d2},p);
       print('-dpng','-r72',filename);
       close;
@@ -201,5 +202,5 @@ end
 %% Inspect one of these scatter plots
 
 figure;
-imageactual(fullfile(dnbdir,'figures','scatter_GLMstandard_vs_GLMdenoise_dataset01.png'));
+imageactual(fullfile(dnbdir,'figures','scatter','scatter_GLMstandard_vs_GLMdenoise_dataset01.png'));
 %%
