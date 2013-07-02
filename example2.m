@@ -51,7 +51,7 @@ end
 
 figure;
 imageactual(fullfile(dnbdir,'figures','dataset01_GLMdenoise.png'));
-title('Cross-validated R^2 for GLMdenoise on Dataset 1');
+% Cross-validated R^2 for GLMdenoise on Dataset 1
 %%
 
 %% Write out spatial maps that provide additional information
@@ -79,17 +79,17 @@ end
 
 figure;
 imageactual(fullfile(dnbdir,'figures','dataset01_meanvol.png'));
-title('Mean volume for Dataset 1');
+% Mean volume for Dataset 1
 %%
 
 figure;
 imageactual(fullfile(dnbdir,'figures','dataset01_voxelselection.png'));
-title('Voxel selection for Dataset 1');
+% Voxel selection for Dataset 1
 %%
 
 figure;
 imageactual(fullfile(dnbdir,'figures','dataset01_brainmask.png'));
-title('Brain mask for Dataset 1');
+% Brain mask for Dataset 1
 %%
 
 %% For each denoising method, calculate the median cross-validated R^2 value achieved on each dataset
@@ -127,7 +127,7 @@ ixs = {1:7 8:13 14:21};
 
 % loop over groups of datasets
 for p=1:length(ixs)
-
+  
   % first, write out the figure to a .png file
   figure; set(gcf,'Visible','off','PaperPositionMode','auto');
   setfigurepos([100 100 900 275]); hold on;
@@ -149,10 +149,9 @@ for p=1:length(ixs)
   % then, show this .png file in a figure window
   figure;
   imageactual(filename);
-  title('Summary of cross-validation results');
-  %%
   
 end
+%%
 
 %% Write out scatter plots that show a detailed comparison of each pair of denoising methods on each dataset
 
