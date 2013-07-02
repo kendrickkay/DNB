@@ -143,7 +143,7 @@ for p=1:length(ixs)
   ylabel('Cross-validated R^2');
   legend(h,denoisenames,'Location','EastOutside');
   filename = sprintf(fullfile(dnbdir,'figures','summary%d.png'),p);
-  print('-dpng',filename);
+  print('-dpng','-r72',filename);
   close;
 
   % then, show this .png file in a figure window
@@ -189,7 +189,7 @@ for p=1:size(allR2,1)
       title(sprintf('Dataset %d',p));
       filename = sprintf(fullfile(dnbdir,'figures','scatter_%s_vs_%s_dataset%02d.png'), ...
                                   denoisemethods{d1},denoisemethods{d2},p);
-      print('-dpng',filename);
+      print('-dpng','-r72',filename);
       close;
 
     end
