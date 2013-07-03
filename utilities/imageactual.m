@@ -12,6 +12,9 @@ function h = imageactual(im)
 % note that if <im> is an indexed image and does not have an 
 % associated colormap, then we default to the colormap gray(256).
 %
+% history:
+% - 2013/07/02 - change functionality and clean up
+%
 % example:
 % imwrite(uint8(255*rand(100,100,3)),'temp.png');
 % figure; imageactual('temp.png');
