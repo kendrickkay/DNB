@@ -1,3 +1,5 @@
+# Denoise Benchmark (DNB)
+
 Denoise Benchmark (DNB) is an architecture for testing and comparing denoising methods 
 for task-based fMRI.  The performance metric is cross-validation accuracy, whereby
 a denoising method is evaluated based on how accurately its estimate of task-related
@@ -18,7 +20,7 @@ For additional information, please visit:
 History of major code changes:
 - 2013/07/03 - Version 1.0.
 
-%%%%%%%%%%%%%%%%%% CONTENTS
+## CONTENTS
 
 These functions download various files not included in the DNB repository:
 - DNBdownloaddata.m - Download datasets to the DNBdata directory
@@ -56,7 +58,7 @@ These are additional files:
                figures illustrating these results
 - README - The file you are reading
 
-%%%%%%%%%%%%%%%%%% ADDITIONAL CONTENTS
+## ADDITIONAL CONTENTS
 
 To maintain compactness, the DNB repository omits large files.  These large
 files can be automatically downloaded using DNBdownloaddata.m and 
@@ -72,7 +74,7 @@ Here is a summary of the downloadable files:
   - results.mat - All benchmarking results
   - figures.tar - Figures illustrating the results
 
-%%%%%%%%%%%%%%%%%% DEPENDENCIES
+## DEPENDENCIES
 
 DNB has several code dependencies besides what is provided in the DNB repository.
 These dependencies are as follows:
