@@ -17,6 +17,16 @@ Then, change to the DNB directory and try running the example scripts.
 For additional information, please visit:
   http://kendrickkay.net/DNB/
 
+Terms of use: This content is licensed under a Creative Commons Attribution 3.0 
+Unported License (http://creativecommons.org/licenses/by/3.0/us/). You are free 
+to share and adapt the content as you please, under the condition that you cite 
+the appropriate manuscript (see below).
+
+If you use the DNB in your research, please cite the following paper:
+  Kay KN, Rokem A, Winawer J, Dougherty RF and Wandell BA (2013) 
+    GLMdenoise: a fast, automated technique for denoising task-based fMRI data.
+    Front. Neurosci. 7:247. doi: 10.3389/fnins.2013.00247
+
 History of major code changes:
 - 2013/07/03 - Version 1.0.
 
