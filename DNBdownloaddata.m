@@ -10,7 +10,7 @@ function DNBdownloaddata(dataset)
 % directory (which is created if it does not exist).  If a given
 % dataset already exists, it is not downloaded.  If you like, 
 % you may manually download the datasets from:
-%   http://kendrickkay.net/DNBdata/
+%   http://stone.psychology.wustl.edu/DNBdata/
 
 % internal constants
 whichphysio = 14:21;
@@ -42,7 +42,7 @@ for p=1:length(dataset)
       fprintf('The file %s already exists. Skipping.\n',files{q});
     else
       fprintf('Downloading %s (please be patient).\n',files{q});
-      urlwrite(sprintf('http://kendrickkay.net/DNBdata/%s',files{q}),fileloc);
+      urlwrite(sprintf('http://stone.psychology.wustl.edu/DNBdata/%s',files{q}),fileloc);
       fprintf('Downloading is done!\n');
     end
   end

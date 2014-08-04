@@ -73,8 +73,8 @@ These are additional files:
 To maintain compactness, the DNB repository omits large files.  These large
 files can be automatically downloaded using DNBdownloaddata.m and 
 DNBdownloadresults.m, or can be manually downloaded at
-  http://kendrickkay.net/DNBdata/
-  http://kendrickkay.net/DNBresults/
+  http://stone.psychology.wustl.edu/DNBdata/
+  http://stone.psychology.wustl.edu/DNBresults/
 
 Here is a summary of the downloadable files:
 - DNBdata - This directory contains the fMRI data
